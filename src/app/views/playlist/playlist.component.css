@@ -1,0 +1,10 @@
+.nav{
+    padding-top: 30px;
+}
+.nav li {
+    padding-left: 30px;
+}
+.img-fluid{
+    height: 200px;
+    width: 200px;
+}

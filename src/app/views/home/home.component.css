@@ -1,0 +1,42 @@
+img{
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to top, transparent 3%, black 100%);
+}
+h1#texto{
+  position:absolute;
+  top:50%;
+  left:50%;
+  text-align: center;
+  size: 70px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  color: white;
+
+
+  transform:translate3d(-50%, -50%, 0);
+
+
+  top: 135px;
+}
+section {
+  width:100%;
+  display:inline-block;
+  font-family: Gotham;
+ }
+
+
+ a#btn_pag{
+  position:absolute;
+    top:50%;
+    left:50%;
+    top: 250px;
+    transform:translate3d(-50%, -50%, 0);
+
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    margin-top: 60px;
+ }

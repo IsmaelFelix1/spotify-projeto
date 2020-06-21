@@ -1,0 +1,17 @@
+<div class="container">
+    <h2 class="d-flex justify-content-center" style="font-family: Arial, Helvetica, sans-serif;">
+        Faça sua própria Playlist</h2>
+    <form [formGroup]="">
+        <div class="form-group w-50">
+            <label for="formGroupExampleInput">Informe o nome da sua Playlist: </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="genero" name="genero"
+            >
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Coloque a imagem do seu Playlist</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1"  name="imagem">
+        </div>
+        <input type="submit" value="salvar" class="btn btn-primary" (click)="salvar()">
+        <button class="btn btn-primary" (click)="cancelar()">Cancelar</button>        
+    </form>
+</div>

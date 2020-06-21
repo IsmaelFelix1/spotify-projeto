@@ -1,0 +1,13 @@
+.container-fluid{
+    height: 100px;
+    
+}
+
+.nav a{
+
+    color: #000;
+
+}
+.nav button{
+    margin-right: 5px;
+}

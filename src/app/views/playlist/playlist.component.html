@@ -1,0 +1,11 @@
+<div class="container ">
+    <h1 style="font-family: Arial, Helvetica, sans-serif;" class="d-flex justify-content-center">Playlist</h1>
+    <div>
+        <button class="btn btn-success" (click)="navigateToCreatePlaylist()">Add</button>
+        <ul class="nav d-flex justify-content-center">
+            <li class="nav-item" *ngFor="let play of playlist" (click)="playlistClick(play)">
+                <img src="../../assets/img/{{play.genero}}/{{play.imagem}}" class="img-fluid">
+            </li>
+        </ul>
+    </div>
+</div>
