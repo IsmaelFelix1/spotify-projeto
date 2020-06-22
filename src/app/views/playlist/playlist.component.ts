@@ -35,7 +35,7 @@ export class PlaylistComponent implements OnInit {
     this.playlistservice.getOnePlaylist(playlist.id).subscribe(
       data => {
         //console.log(data)
-        this.router.navigate(["/detail-playlist/" + playlist.id])
+        this.router.navigate(["/detail-playlist/", playlist.id])
       },
       error => {
         console.log("Aconteceu algum erro.", error.message);

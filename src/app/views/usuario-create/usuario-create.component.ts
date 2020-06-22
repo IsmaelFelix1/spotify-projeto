@@ -20,26 +20,30 @@ export class UsuarioCreateComponent implements OnInit {
               private router: Router ) { }
 
   ngOnInit(): void {
-    this.UserCreateForm = this.fb.group({
-      username: [''],
-      email: [''],
-      senha: [''],
-      apelido: [''],
-      genero:[''],
-      data: ['']
-    });
+    this.CreateUsuario(new Usuario())
   }
+  CreateUsuario(usuario: Usuario){
+  this.UserCreateForm = this.fb.group({
+    nome: [null],
+    email: [null],
+    senha: [null],
+    apelido: [null],
+    genero:[null],
+    data: [null]
+  });
+}
 
-  inserir(){
-    this.us.CreateUsuario(this.UserCreateForm.value).subscribe(res => {
-      this.usuario = res;
-    },
-    error =>{
-      console.log(error);
-    });
+  inserir(form: Usuario){
+    this.us.CreateUsuario(this.UserCreateForm.value).subscribe(
+      data => {
+        console.log("adicionado!")
+      },
+      error =>{
+        console.log("Ocorreu algum error" + error.message)
+      }
+    )
 
-    alert("Cadastro com sucesso!");
-    this.router.navigate(['/playlist']);
+    
 
 
     //Aqui quando a parte da API estiver pronta, vai enviar para o banco com esse comando

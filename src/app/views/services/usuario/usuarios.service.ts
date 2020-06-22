@@ -10,19 +10,17 @@ import { map } from "rxjs/operators";
 })
 export class UsuariosService {
 
-  API = "http://127.0.0.1:8000/api/v2/usuarios/";
-  headers: HttpHeaders = new HttpHeaders({"Content-Type": "application/json" ,
-                                          Authorization: "Token 69a7b8caa8f919e06fd966a946565ea022213b15"});
+  API = 'http://127.0.0.1:8000/api/usuarios/';
+  token = 'Token b8883a6a5e9dba39493cdf8728b52bab8292e597'
+  headers: HttpHeaders = new HttpHeaders().set('Content-Type', 'application/json')
+  .set('Authorization', this.token );
+
   constructor(private router: Router,
               private http: HttpClient) { }
 
-  insert(){
-    //aqui insere ao banco
-  }
-  
   // criar usuario
-  CreateUsuario(resquet: Usuario): Observable<Usuario>{
-    return this.http.post<Usuario>(this.API, resquet, {headers: this.headers});
+  CreateUsuario(usuario: Usuario): Observable<any>{
+    return this.http.post<any>(this.API, JSON.stringify(usuario), {headers: this.headers});
   }
 
   loginUsuario(resquet: Usuario){
